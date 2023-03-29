@@ -1,0 +1,258 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* <!--  Nav bar code Started --> */
+
+#navbar{
+ /* border: 1px solid red; */
+ display: flex;
+ justify-content: space-between;
+ color: rgb(30, 33, 36);
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ position: sticky;
+ top: 0;
+ background-color: #fff;
+ z-index: 999;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.brandname{
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.midsection ul{
+  display: inline-flex;
+  list-style: none;
+}
+
+.midsection ul li{
+  margin: 20px 16px;
+}
+.midsection ul li a{
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    color: rgb(107, 120, 127);
+
+}
+
+.lastsection{
+  margin: 16px;
+  font-weight: 600;
+}
+.lastsection a {
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 17px;
+  color: rgb(107, 120, 127);
+}
+.signup{
+  padding: 10px;
+  background-color: #F9BE00;
+  border: none;
+  font-weight: 600;
+}
+
+.dropdown{
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dropdown .show{
+  display: flex;
+  /* z-index: 9999; */
+}
+
+.line {
+  border: 1px solid rgb(30, 33, 36);
+  width: 80%;
+  margin: auto;
+}
+.left {
+  width: 50%;
+  background-color: #fff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.title {
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+.right {
+  width: 50%;
+  background-color: rgb(198, 219, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+.right .line{
+  margin-top: 0;
+}
+.first, .second, .third , .four{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.first h3, .second h3, .third h3 , .four h3 {
+  color: #007faa;
+}
+
+.first p, .second p, .third p {
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Nav bar code Ended  */
+
+/* ============================================================== */
+/* typewritting css */
+
+#typing{
+  text-align: center;
+  color:black;
+  margin-bottom: 150px;
+  margin-top: 200px;
+}
+
+* { color:black; text-decoration: none;}
+
+.wrap{
+  font-size: 56px;
+}
+
+#info{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#green-button{
+  margin-top: 20px;
+  background-color: #00ce78;
+  border: none;
+  font-size: 20px;
+  font-family: 900;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+/* ******************* */
+
+#banner1{
+  /* border: 1px solid red; */
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+#who{
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#buttons button{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 6px 40px;
+  cursor: pointer;
+  }
+  
+  #buttons button:hover {
+    background-color: #f7f8fa;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition-delay: 1ms;
+  }
+
+  #grid_container{
+    margin: auto;
+    margin-top: -53px;
+    display: flex;
+    scale: .8;
+}
+#grid_container>#first{
+    margin-right: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: scale 300ms;
+}
+
+#grid_container>#allfour{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+   
+    
+}
+#grid_container>#allfour>img{
+    transition: scale 300ms;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#grid_container>#first:hover{
+    scale: 1.05;
+}
+
+#grid_container>#allfour>img:hover{
+    scale: 1.05;
+}
+
+#empty{
+  /* border: 1px solid red; */
+  width: 70%;
+  margin: auto;
+  height: 50px;
+  background-color: #f7f7f7;
+  margin-top: -60px;
+}
+  /* <!-- who section --> */
+
+  /* banner2 */
+
+#banner2>h4{
+  margin: auto;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+#banner2>div>img{
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* ============================================================== */
+
