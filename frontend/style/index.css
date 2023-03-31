@@ -256,6 +256,116 @@
 }
 
 /* ============================================================== */
+
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.banner-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner-top h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-top p {
+  font-size: 16px;
+  color: #666;
+}
+
+.banner-low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.banner-box {
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+.banner-box:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-heading {
+  padding: 15px 0;
+  color: white; 
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+
+.box-heading h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.box-icon img {
+  width: 80px;
+  margin-top: 25px;
+}
+
+.box-text {
+  padding: 20px 0;
+  margin-bottom: 25px;
+}
+
+.box-text p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.box-details {
+  padding: 15px 0;
+}
+
+.box-details p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.box-btn button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.green{
+  background-color: #00bf6f;
+}
+.blue{
+background-color: #05477E;
+}
+.purple{
+background-color: #53225B;
+}
 /* *********************footer */
 
 #banner7 {
