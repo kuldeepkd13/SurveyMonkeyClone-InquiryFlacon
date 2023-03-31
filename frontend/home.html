@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/frontend/style/home.css">
+</head>
+<body>
+    <!--  Nav bar code Started -->
+
+    <div id="navbar">
+        <div class="navfirst">
+            <div class="brand">
+                <div class="logo">
+                    <img style="width: 45px; height: 45px;" src="/frontend//Image/logo1.png" alt="brand">
+                </div>
+            </div>
+            <div class="midsection">
+                <ul>
+                    <li id="home-link"><a href="home.html">Home</a></li>                    <li><a href="#" onclick="toggleDropdown2(document.getElementById('dropdown2'))">Explore &#9660;</a>
+                        <div class="dropdown2" id="dropdown2">
+                            <div class="left">
+                                <h4 class="title">Audience</h4>
+                                <div class="line"></div>
+                                <div class="first">
+                                    <p>Survey people who live, work, and do what matters to you. Reach audiences in 130+ countries and get responses quickly.</p>
+                                </div>
+                                <div class="second">
+                                    <h3>Buy targeted</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>responses</h3>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4 class="title">Brand and market research</h4>
+                                <div class="line"></div>
+                                <div class="first">
+                                    <p>Discover expert-designed solutions to gather feedback on your ideas, products, and business. Get valuable insights delivered in days.</p>
+                                </div>
+                                <div class="second">
+                                    <h3>Brand tracking</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>Ad tracking</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>Idea screening</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/frontend/plan.html">Plan&Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navsecond">
+            <div class="buttondiv">
+                <button class="upgrade"><a href="#">Upgrade</a></button>
+                <button class="survey white"><a href="#">Create Survey</a></button>
+            </div>
+            <div class="username" style="color: white;">
+                <p id="login" onclick="toggleDropdown1(document.getElementById('dropdown1'))"></p>
+                <div class="dropdown1" id="dropdown1">
+                    <div class="left1">
+                        <div class="first1">
+                            <h4>My Account</h4>
+                        </div>
+                        <div class="second1">
+                            <h4>Library</h4>
+                        </div>
+                        <div class="third1">
+                            <h4>Contact</h4>
+                        </div>
+                        <div class="four1">
+                            <h4 id="logout">Sign out</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nav bar code Ended  -->
+</body>
+<script src="/frontend/src/home.js"></script>
+</html>
