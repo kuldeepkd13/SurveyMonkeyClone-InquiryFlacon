@@ -216,7 +216,6 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
   .search {
     display: flex;
     align-items: center;
@@ -239,7 +238,7 @@
   }
   
   #main{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     width: 96%;
     margin: auto;
@@ -247,7 +246,7 @@
   }
   
   .surveydata{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 80%;
   }
   .heading{
@@ -257,11 +256,10 @@
     font-weight: 200;
   }
   #contanier{
-    margin: 15px; display: grid; grid-template-columns: repeat(3,1fr); gap: 25px;
-  }
-
-  .card{
-    height: 250px;
+    margin: 15px; 
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
   }
 
   .mainright{
@@ -297,13 +295,17 @@
   .top1 button{
     background-color: white;
     color: #404040;
-    border: none;
+    border: 1px solid #404040;
     padding: 10px 65px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: 600;
+  }
+
+  .top1 button:hover{
+    background-color: #e0dfdf;
   }
   
   .mid{
@@ -363,6 +365,207 @@
 
   
   
+/* updateform */
 
- 
+
+
   
+#updateForm {
+  display: none;
+  position: fixed;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0dfdf ;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#closeUpdateForm {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+#closeUpdateForm:hover{
+  color: #000;
+}
+
+#updateSurveyForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#updateSurveyForm label {
+  margin-bottom: 10px;
+}
+
+#updateSurveyForm input[type="text"],
+#updateSurveyForm select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  outline: none
+}
+
+#updateSurveyForm input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#updateSurveyForm input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#updateSurveyForm input[type="submit"]:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* create form */
+
+
+.createSurvey{
+  display: none;
+  position: fixed;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0dfdf ;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#closeUpdateForm1{
+position: absolute;
+top: 5px;
+right: 10px;
+font-size: 25px;
+font-weight: bold;
+color: #aaa;
+cursor: pointer;
+}
+
+#closeUpdateForm1:hover {
+color: #000;
+}
+
+#createSurvey form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+#createSurvey h3{
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 300;
+}
+#createSurvey label {
+  margin-right: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#createSurvey input,
+#createSurvey select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  flex: 1;
+}
+
+#createSurvey input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#createSurvey input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#createSurvey input[type="submit"]:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
+}
+
+#createSurvey select:focus,
+#createSurvey input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #3e8e41;
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carddate {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.status {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cardBtn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.cardBtn button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cardBtn button:hover {
+  background-color: #3e8e41;
+}

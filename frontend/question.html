@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/frontend/style/home.css">
+    <link rel="stylesheet" href="/frontend/style/question.css">
+
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div class="navfirst">
+            <div class="brand">
+                <div class="logo">
+                    <img style="width: 45px; height: 45px;" src="/frontend//Image/logo1.png" alt="brand">
+                </div>
+            </div>
+            <div class="midsection">
+                <ul>
+                    <li id="home-link"><a href="home.html">Home</a></li>
+                    <li><a href="#" onclick="toggleDropdown2(document.getElementById('dropdown2'))">Explore &#9660;</a>
+                        <div class="dropdown2" id="dropdown2">
+                            <div class="left">
+                                <h4 class="title">Audience</h4>
+                                <div class="line"></div>
+                                <div class="first">
+                                    <p>Survey people who live, work, and do what matters to you. Reach audiences in 130+
+                                        countries and get responses quickly.</p>
+                                </div>
+                                <div class="second">
+                                    <h3>Buy targeted</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>responses</h3>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4 class="title">Brand and market research</h4>
+                                <div class="line"></div>
+                                <div class="first">
+                                    <p>Discover expert-designed solutions to gather feedback on your ideas, products,
+                                        and business. Get valuable insights delivered in days.</p>
+                                </div>
+                                <div class="second">
+                                    <h3>Brand tracking</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>Ad tracking</h3>
+                                </div>
+                                <div class="third">
+                                    <h3>Idea screening</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/frontend/plan.html">Plan&Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navsecond">
+            <div class="buttondiv">
+                <button class="upgrade"><a href="#">Upgrade</a></button>
+                <button class="survey white"><a href="#">Create Survey</a></button>
+            </div>
+            <div class="username" style="color: white;">
+                <p id="login" onclick="toggleDropdown1(document.getElementById('dropdown1'))"></p>
+                <div class="dropdown1" id="dropdown1">
+                    <div class="left1">
+                        <div class="first1">
+                            <h4>My Account</h4>
+                        </div>
+                        <div class="second1">
+                            <h4>Library</h4>
+                        </div>
+                        <div class="third1">
+                            <h4>Contact</h4>
+                        </div>
+                        <div class="four1">
+                            <h4 id="logout">Sign out</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav bar -->
+
+
+    <div id="question">
+        <div id="leftquestion">
+            <h3>Add Question</h3>
+            <div id="questioncontainer">
+                <form id="addquestion" method="POST">
+                    <input type="hidden" id="surveyId" value=""><br><br>
+
+                    <label for="questionText">Question Text:</label>
+                    <input type="text" id="questionText" name="questionText"><br><br>
+
+                    <label for="questionType">Question Type:</label>
+                    <select id="questionType" name="questionType" onchange="toggleOptionsSection()">
+                        <option value="">Select</option>
+                        <option value="mcq">MCQ</option>
+                        <option value="open">Open-Ended</option>
+                    </select><br><br>
+
+                    <div id="optionsSection" style="display:none;">
+                        <label for="options">Options:</label><br>
+                        <input type="text" id="option1" name="options"><br>
+                        <input type="text" id="option2" name="options"><br>
+                        <input type="text" id="option3" name="options"><br>
+                        <input type="text" id="option4" name="options"><br><br>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div id="rightquestion">
+            <h3>All Question</h3>
+            <div id="allquestion">
+                <!-- data will append from the database with the help of api -->
+            </div>
+            <button id="done">Done</button>
+        </div>
+    </div>
+</body>
+<script>
+    function toggleOptionsSection() {
+        const questionType = document.getElementById('questionType').value;
+        const optionsSection = document.getElementById('optionsSection');
+
+        if (questionType === 'mcq') {
+            optionsSection.style.display = 'block';
+        } else {
+            optionsSection.style.display = 'none';
+        }
+    }
+
+    const newurl = "http://localhost:4500";
+    let token = localStorage.getItem("token") || "";
+    let surveyId = localStorage.getItem('surveyId') || ""
+    const form = document.getElementById('addquestion');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const surveyId = localStorage.getItem('surveyId');
+        const questionText = document.getElementById('questionText').value;
+        const questionType = document.getElementById('questionType').value;
+        let options = [];
+
+        if (questionType === 'mcq') {
+            options.push(document.getElementById('option1').value);
+            options.push(document.getElementById('option2').value);
+            options.push(document.getElementById('option3').value);
+            options.push(document.getElementById('option4').value);
+        }
+        console.log(options)
+        try {
+            const response = await fetch(`${newurl}/question/addquestion`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Authorization": `${token}`
+                },
+                body: JSON.stringify({
+                    surveyId,
+                    questionText,
+                    questionType,
+                    options,
+                }),
+            });
+
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('questionText').value = '';
+            document.getElementById('questionType').value = '';
+            document.getElementById('option1').value = '';
+            document.getElementById('option2').value = '';
+            document.getElementById('option3').value = '';
+            document.getElementById('option4').value = '';
+            fetchdata()
+        } catch (error) {
+            console.error(error);
+        }
+    });
+
+
+
+    const allQuestionContainer = document.getElementById("allquestion");
+
+    async function fetchdata() {
+        try {
+            let res = await fetch(`${newurl}/question/allquestion/${surveyId}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `${token}`
+                },
+            })
+            let data = await res.json()
+            console.log(data.data)
+            displayData(data.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    fetchdata()
+
+
+    function displayData(data) {
+        allQuestionContainer.innerHTML = null
+        if (Array.isArray(data)) {
+            data.forEach(question => {
+                const questionContainer = document.createElement('div');
+                questionContainer.classList.add('question-container');
+
+                const questionText = document.createElement('h4');
+                questionText.textContent = question.question_text;
+
+                const questionType = document.createElement('p');
+                questionType.classList.add('question-type');
+                questionType.textContent = question.question_type;
+
+                const optionsList = document.createElement('ul');
+                if (question.question_type === 'mcq') {
+                    question.options.forEach(option => {
+                        const optionItem = document.createElement('li');
+                        optionItem.textContent = option;
+                        optionsList.appendChild(optionItem);
+                    });
+                }
+
+                questionContainer.appendChild(questionText);
+                questionContainer.appendChild(optionsList);
+                questionContainer.appendChild(questionType);
+
+                allQuestionContainer.appendChild(questionContainer);
+            });
+        }
+    }
+
+
+    const doneBtn = document.getElementById('done');
+
+    doneBtn.addEventListener('click', () => {
+        // remove surveyId from localStorage
+        localStorage.removeItem('surveyId');
+
+        // redirect to Home.html
+        window.location.href = 'home.html';
+    });
+
+    function toggleDropdown2(dropdown2) {
+        if (dropdown2.style.display === 'none') {
+            dropdown2.style.display = 'flex';
+        } else {
+            dropdown2.style.display = 'none';
+        }
+    }
+
+    function toggleDropdown1(dropdown1) {
+        if (dropdown1.style.display === 'none') {
+            dropdown1.style.display = 'block';
+        } else {
+            dropdown1.style.display = 'none';
+        }
+
+        let logoutEL = document.getElementById("logout");
+
+        // clear localStorage when Sign Out is clicked
+        logoutEL.addEventListener("click", () => {
+            localStorage.removeItem("username");
+            localStorage.removeItem("token");
+            localStorage.removeItem('surveyId');
+            window.location.href = "/frontend/index.html"
+            loginEL.innerText = "";
+
+        });
+    }
+
+
+</script>
+
+</html>

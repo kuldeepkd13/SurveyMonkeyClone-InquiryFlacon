@@ -24,10 +24,6 @@ surveyRoute.post("/addsurvey",async(req,res)=>{
     }
 })
 
-surveyRoute.get("/",(req,res)=>{
-    res.send("hello")
-})
-
 surveyRoute.get("/allsurvey", async (req, res) => {
     try {
       const user = await UserModel.findOne({ _id: req.body.userId }).populate("surveys");

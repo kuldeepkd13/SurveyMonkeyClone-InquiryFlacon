@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#question {
+    margin: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+#leftquestion {
+  width: 40%;
+}
+
+#rightquestion {
+  width: 60%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-container h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.question-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.question-container ul {
+  list-style: none;
+  margin-left: 25px;
+  padding-left: 0;
+}
+
+.question-container li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#done{
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+}
+#leftquestion h3 , #rightquestion h3{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+#addquestion {
+  margin: 20px;
+  padding: 20px;
+  width: 80%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+input[type="text"], select {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+}
+  
