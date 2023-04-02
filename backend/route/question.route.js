@@ -39,13 +39,12 @@ questionRoute.post('/addquestion', async (req, res) => {
     }
   })
 
-questionRoute.get("/",(req,res)=>{
-    res.send("hello")
-})
 
-questionRoute.get("/allquestion", async (req, res) => {
+
+questionRoute.get("/allquestion/:surveyId", async (req, res) => {
+     const surveyId =req.params.surveyId
     try {
-      const user = await SurveyModel.findOne({ _id: req.body.surveyId }).populate("questions");
+      const user = await SurveyModel.findOne({ _id: surveyId }).populate("questions");
       if(!user){
         res.status(400).send({"message":"No Question Added , Please add Question"});
       }else{

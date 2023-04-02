@@ -531,3 +531,8 @@ background-color: #53225B;
   margin: auto;
   margin-top: -45px;
 }
+
+#banner12>img{
+  padding-top: 50px;
+  width: 100%;
+}

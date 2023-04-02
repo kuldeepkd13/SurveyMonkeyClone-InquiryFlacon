@@ -93,7 +93,22 @@
         </div>
         <div class="homelower">
           <div class="survey1">
-            <button>Create Survey</button>
+            <button onclick="toggleDropdown3(document.getElementById('createSurvey'))">Create Survey</button>
+            <div class="createSurvey" id="createSurvey">
+                <h3>Create Survey</h3>
+                <form id="addsurvey" method="post">
+                    <span id="closeUpdateForm1">&times;</span>
+                  <label for="tilte">Title</label>
+                  <input type="text" id="title">
+                  <label for="type">Type</label>
+                  <select id="type">
+                    <option value="select">Select</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="feedback">Feedback</option>
+                  </select>
+                  <input type="submit" value="Add Survey">
+                </form>
+            </div>
           </div>
           <div class="search">
             <input type="text" placeholder="Search...">
@@ -109,6 +124,28 @@
       <div id="main">
          <div class="surveydata">
             <h3 class="heading">All Surveys</h3>
+            <div id="updateForm">
+                <span id="closeUpdateForm">&times;</span>
+                <form id="updateSurveyForm">
+                  <input type="hidden" id="surveyId" name="surveyId" value="">
+                  <label for="updatedTitle">Title:</label>
+                  <input type="text" id="updatedTitle" name="updatedTitle"><br><br>
+                  <label for="updatedType">Type:</label>
+                  <select id="updatedType">
+                    <option value="select">Select</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="feedback">Feedback</option>
+                  </select><br><br>
+                  <label for="Status">Status</label>
+                  <select id="status">
+                    <option value="select">Select</option>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                  </select><br><br>
+                  <input type="submit" value="submit">
+                </form>
+              </div>
+              
             <div  id="contanier">
                 <!-- append all the survey here -->
         </div>

@@ -3,12 +3,13 @@ var username = localStorage.getItem('username');
 var isLoggedIn = token && username;
 const head = document.querySelector('head');
 const css = document.createElement('link');
+let navbar = document.getElementById("navbar")
 if (isLoggedIn) {
     // User is logged in
     css.rel = 'stylesheet';
     css.href = '/frontend/style/home.css';
     head.appendChild(css);
-    document.write(`<div id="navbar">
+    navbar.innerHTML=`
     <div class="navfirst">
         <div class="brand">
             <div class="logo">
@@ -80,12 +81,12 @@ if (isLoggedIn) {
         </div>
     </div>
 </div>
-`);
+`;
 } else {
     css.rel = 'stylesheet';
     css.href = '/frontend/style/index.css';
     head.appendChild(css);
-    document.write(`<div id="navbar">
+    navbar.innerHTML=`
     <a href="index.html"><div class="brand">
             <div class="logo">
                 <img style="width: 40px; height: 40px;" src="/frontend//Image/logo1.png" alt="brand">
@@ -188,7 +189,7 @@ if (isLoggedIn) {
         <a href="/frontend/login.html">Log in</a>
         <button class="signup"><a href="signup.html">Signup Free</a></button>
     </div>
-</div>`)
+</div>`
 }
 
 
