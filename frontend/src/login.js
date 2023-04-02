@@ -1,4 +1,4 @@
-const url = "http://localhost:4500";
+const url = "https://magnificent-crow-skirt.cyclic.app";
 const form = document.querySelector("form");
 
 const emailInput = document.getElementById("email");

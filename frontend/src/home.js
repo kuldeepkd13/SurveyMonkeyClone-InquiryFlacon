@@ -52,7 +52,7 @@ else if (url.includes("plan.html")) {
 }
 
 let contanierEl = document.getElementById("contanier")
-let apiUrl = `http://localhost:4500`
+let apiUrl = `https://magnificent-crow-skirt.cyclic.app`
 
 let token = localStorage.getItem("token") || ""
 async function fetchdata() {
