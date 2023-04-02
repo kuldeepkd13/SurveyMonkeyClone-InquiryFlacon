@@ -86,14 +86,15 @@ if (isLoggedIn) {
     css.href = '/frontend/style/index.css';
     head.appendChild(css);
     document.write(`<div id="navbar">
-    <div class="brand">
-        <div class="logo">
-            <img style="width: 40px; height: 40px;" src="/frontend//Image/logo1.png" alt="brand">
+    <a href="index.html"><div class="brand">
+            <div class="logo">
+                <img style="width: 40px; height: 40px;" src="/frontend//Image/logo1.png" alt="brand">
+            </div>
+            <div class="brandname">
+                <h2>Inquary Falcon</h2>
+            </div>
         </div>
-        <div class="brandname">
-            <h2>Inquary Falcon</h2>
-        </div>
-    </div>
+    </a>
     <div class="midsection">
         <ul>
             <li><a href="#" onclick="toggleDropdown(this)">Product &#9660;</a>
