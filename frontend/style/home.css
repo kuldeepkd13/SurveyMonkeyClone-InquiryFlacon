@@ -569,3 +569,8 @@ color: #000;
 .cardBtn button:hover {
   background-color: #3e8e41;
 }
+
+#banner12>img{
+  padding-top: 50px;
+  width: 100%;
+}
