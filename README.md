@@ -1,4 +1,8 @@
 # joyful-pet-260
 
-backenddeployment link = https://magnificent-crow-skirt.cyclic.app/
-frontendDeployment link = https://cute-maamoul-ca9fb6.netlify.app/
+It is a servery website which is used to create the servey form and send to the client to collect the data.
+
+
+## To visit our website [click here](https://cute-maamoul-ca9fb6.netlify.app/)
+
+
