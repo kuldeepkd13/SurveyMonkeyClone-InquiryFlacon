@@ -1,4 +1,4 @@
-const url = "https://magnificent-crow-skirt.cyclic.app";
+const url = "https://long-tan-crab-vest.cyclic.app/";
 const form = document.querySelector("form");
 
 const emailInput = document.getElementById("email");
