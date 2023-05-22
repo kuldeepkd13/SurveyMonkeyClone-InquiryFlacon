@@ -50,7 +50,7 @@ Here are some screenshots of the Miss-Minutes website:
 ![log](https://github.com/kuldeepkd13/Doller-tree-clone/assets/119401564/f252eaea-6d6a-4708-ba31-d36973dab3fb)
 ## 5. Question Page
 ![question](https://github.com/kuldeepkd13/Doller-tree-clone/assets/119401564/57e39d67-0790-4a72-8292-12916064de1c)
-## 6.Plan$price Page
+## 6.Plan&price Page
 ![plan](https://github.com/kuldeepkd13/Doller-tree-clone/assets/119401564/2781df73-e758-443a-9812-0a0e2c82f8be)
 
 ## Project Timeline!
