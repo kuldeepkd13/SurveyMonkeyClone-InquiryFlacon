@@ -1,4 +1,4 @@
-const url = "https://long-tan-crab-vest.cyclic.app/";
+const url = "https://fantastic-cummerbund-bat.cyclic.cloud/";
 const form = document.querySelector("form");
 
 const usernameInput = document.getElementById("name");

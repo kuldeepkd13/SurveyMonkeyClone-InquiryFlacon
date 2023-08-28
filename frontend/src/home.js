@@ -52,7 +52,7 @@ else if (url.includes("plan.html")) {
 }
 
 let contanierEl = document.getElementById("contanier")
-let apiUrl = `https://long-tan-crab-vest.cyclic.app/`
+let apiUrl = `https://fantastic-cummerbund-bat.cyclic.cloud`
 
 let token = localStorage.getItem("token") || ""
 async function fetchdata() {
