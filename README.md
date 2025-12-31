@@ -9,7 +9,7 @@ This is a clone of the Survey Monkey website, designed to provide similar survey
 The project has been deployed using the following platforms:
 
 - Frontend: Netlify
-  - URL: [Survey-monkey-clone](https://chipper-trifle-7772b9.netlify.app/)
+  - URL: [Survey-monkey-clone](https://inquary.netlify.app/)
 
 - Backend: Cyclic
   - URL: [cyclic](https://long-tan-crab-vest.cyclic.app)
