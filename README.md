@@ -1,4 +1,4 @@
-# Survey-Monkey-Clone(Inquiry-Falcone)
+# Inquiry-Falcone
 
 This is a clone of the Survey Monkey website, designed to provide similar survey creation and management functionality. The application allows users to create surveys, add questions to surveys, and perform CRUD (Create, Read, Update, Delete) operations on surveys.
 
